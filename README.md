@@ -113,7 +113,7 @@ Sample records in the DynamoDB table:
 <img width="1582" alt="Screenshot 2024-09-11 at 8 17 43 PM" src="https://github.com/user-attachments/assets/2ad5484f-e7fc-4104-bbf0-a809b90a4ac9">
 
 
-Reflection:
+## Reflection:
 Since I had already worked with AWS Lambda before, I knew the basics of how that works. So, I decided to add more challenge to it by using serverless framework. I learned a lot while figuring out what goes into the serverless.yaml config file to make it work both locally and in production. I felt this was a crucial thing for me to learn as this was I also got to test my changes locally with the serverless offline plugin. 
 
 Apart from this, other errors I had to debug were related to permissions. Initially, the lambda role didn't have enough permissions to work with the DynamoDB table. Here, the AWS documentation around policies came in handy.
