@@ -52,7 +52,7 @@ For local development, the serverless framework uses serverless-offline plugin t
 
 ### 2. AWS Production (dev)
 
-In this stage of the application, the serverless framework uses AWS Cloudformation to deploy the necessary AWS resources based on the configuration in `serverless.yaml`. After the deployment done by serverless, the application is hosted on the AWS environment and is available for use publicly.
+In this stage of the application, the serverless framework uses AWS Cloudformation to deploy the necessary AWS resources based on the configuration in `serverless.yaml`. After the serverless deployment, the application is hosted in the AWS environment and is available for public use.
 
 
 ## Running Locally
@@ -63,7 +63,9 @@ To run the application locally (in `offline` stage), use the following command:
 npm run start
 ```
 
-This will first start DynamoDB on `http://localhost:8000` and then it will start serverless offline to simulate API Gateway and Lambda functinos on `http://localhost:3000`.
+This will first start DynamoDB on `http://localhost:8000` and then start serverless offline to simulate API Gateway and Lambda functions on `http://localhost:3000`.
+
+<img width="906" alt="Screenshot 2024-09-11 at 5 16 35 PM" src="https://github.com/user-attachments/assets/f0cf08e7-2287-48cc-83e3-f017e84d74bc">
 
 
 ### Local Endpoints
@@ -74,9 +76,11 @@ You can access the following endpoints in local development:
 - GET http://localhost:3000/offline/students?student_id=123: Retrieve a student record by `student_id`.
 
 Example POST request using Postman:
+<img width="1582" alt="Screenshot 2024-09-11 at 8 07 09 PM" src="https://github.com/user-attachments/assets/cccba3c5-05fb-40fb-8440-e8b61af358f6">
 
 
 Example GET request using Postman:
+<img width="1582" alt="Screenshot 2024-09-11 at 8 08 25 PM" src="https://github.com/user-attachments/assets/20c23c4d-d146-44cd-87e6-b6867bda204d">
 
 
 ## Deploying to AWS
@@ -87,19 +91,26 @@ To deploy the application to AWS (in `dev` stage), use the following command:
 npm run deploy
 ```
 
-This will deploy the entire stack (Lambda function, API Gatway and DynamoDB) to AWS.
+This will deploy the entire stack (Lambda function, API Gateway and DynamoDB) to AWS.
+
+<img width="906" alt="Screenshot 2024-09-11 at 5 22 16 PM" src="https://github.com/user-attachments/assets/6ca7abef-b81e-4cef-afbd-02727ed46138">
+
+
+
 
 ### AWS Endpoints
 
-Once deployed, the API Gateway will provide URLs. You can access using Postman/cURL to use the student api.
+Once deployed, the API Gateway will provide URLs. You can access the student API using Postman/cURL.
 
 Example POST request:
-
+<img width="1582" alt="Screenshot 2024-09-11 at 8 13 57 PM" src="https://github.com/user-attachments/assets/c6976354-7037-4820-8614-ad541de6e60a">
 
 Example GET request:
+<img width="1582" alt="Screenshot 2024-09-11 at 8 13 44 PM" src="https://github.com/user-attachments/assets/c7b7dac7-adf8-4075-aedd-262639c59b30">
 
 
 Sample records in the DynamoDB table:
+<img width="1582" alt="Screenshot 2024-09-11 at 8 17 43 PM" src="https://github.com/user-attachments/assets/2ad5484f-e7fc-4104-bbf0-a809b90a4ac9">
 
 
 Reflection:
